@@ -19,20 +19,33 @@ class Calculator {
     setNumTwo(value){
         this.numTwo += value;
     }
+    setOperator(operator){
+        this.operator = operator;
+    }
 }
 
 const calculator = new Calculator();
 
+const signObject = {
+    ADD : "+",
+    SUBTRACT : "-",
+    MULTIPLY : "*",
+    DIVIDE : "/",
+    MODULO : "%",
+    EQUAL : "="
+}
+
 const updateMainDisplay = () =>{
     const main = document.getElementById("main-display")
-    main.innerText = calculator.operator ? calculator.numTwo : calculator.numOne;
+    main.innerText = calculator.operator ? calculator.numTwo || 0 : calculator.numOne || 0;
 }
 const updateSecondaryDisplay = () =>{
     const secondary = document.getElementById("secondary-display")
-    secondary.innerHTML = `<label class ="secondary-display">${calculator.numOne}
-                            <span class = "operator">${calculator.operator}</span>
-                            ${calculator.numTwo}</label>`
+    secondary.innerHTML = `${calculator.numOne}
+                            <span class = "operator"> ${signObject[calculator.operator] || ""} </span>
+                            ${calculator.numTwo}`
 }
+
 
 const numKeyHandler = (num) =>{
     if(calculator.operator)
@@ -42,4 +55,34 @@ const numKeyHandler = (num) =>{
     console.log(calculator.numOne)
     updateMainDisplay();
     updateSecondaryDisplay();
+}
+
+const operatorKeyHandler = (operator) =>{
+    calculator.setOperator(operator);
+    updateMainDisplay();
+    updateSecondaryDisplay();
+
+}
+
+const resultKeyHandler = () =>{
+    switch (calculator.operator) {
+        case "ADD":
+            calculator.add()
+            break;
+        case "SUBTRACT":
+            calculator.subtract()
+            break;
+        case "MULTIPLY":
+            calculator.multiply()
+            break;
+        case "DIVIDE":
+            calculator.add()
+            break;
+        case "MODULO":
+            calculator.add()
+            break;
+            
+        default:
+            break;
+    }
 }
