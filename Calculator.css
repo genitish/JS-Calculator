@@ -1,5 +1,5 @@
 body{
-    background: grey;
+    background: #E8E8E8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,13 @@ body{
     
 }
 
-.color{
+.day{
+    color: black;
+    font-size: 24px;
+    padding: 6px;
+}
+
+.night {
     color: antiquewhite;
     font-size: 24px;
     padding: 6px;
@@ -43,10 +49,19 @@ body{
 
 .theme-button{
     padding: 2px;
-    background-color: #292D36;
+   
     border-radius: 10px;
     margin-top: 12px;   
 }
+.theme-button.dark{
+    background-color: #292D36;
+}
+
+.theme-button.light{
+    background-color: #F9F9F9;
+}
+
+
 
 .non-selected{
     opacity: 0.3;
@@ -54,12 +69,15 @@ body{
 
 .display-output-container{
     display:flex;
-    color:antiquewhite;
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
     height: 70%;
     padding-right: 14px;
+}
+
+.display-output-container.dark{
+    color:antiquewhite;
 }
 
 .secondary-display{
@@ -91,8 +109,7 @@ body{
     min-width: 40px;
     min-height: 30px;
     margin: 10px 14px;
-    background-color: black;
-    color:antiquewhite;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,11 +118,15 @@ body{
     font-size: 24px;
     border-radius: 8px;
 }
+.key.dark{
+    background-color: #22252D;
+    color:antiquewhite;
+}
 
-.operator{
+.dark.operator{
     color:#754247;
 }
 
-.operation{
+.dark.action{
     color:#26FFD8;
 }

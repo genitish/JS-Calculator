@@ -53,7 +53,6 @@ const signObject = {
     MODULO : "%",
     EQUAL : "="
 }
-
 const updateMainDisplay = () =>{
     const main = document.getElementById("main-display")
     main.innerText = calculator.operator ? calculator.numTwo || 0 : calculator.numOne || 0;
@@ -61,11 +60,9 @@ const updateMainDisplay = () =>{
 const updateSecondaryDisplay = () =>{
     const secondary = document.getElementById("secondary-display")
     secondary.innerHTML = `${calculator.numOne}
-                            <span class = "operator"> ${signObject[calculator.operator] || ""} </span>
+                            <span class = "dark operator"> ${signObject[calculator.operator] || ""} </span>
                             ${calculator.numTwo}`
 }
-
-
 const numKeyHandler = (num) =>{
     if(calculator.operator)
         calculator.setNumTwo(num);
@@ -107,7 +104,6 @@ const resultKeyHandler = () =>{
     const main = document.getElementById("main-display")
     main.innerText = calculator.result;
 }
-
 const actionKeyHandler = (action) => {
     switch (action) {
         case 'ALLCLEAR':
@@ -121,4 +117,15 @@ const actionKeyHandler = (action) => {
     }
     updateMainDisplay();
     updateSecondaryDisplay();
+}
+
+
+const themeChangeHandler = (theme) => {
+    const mainContainer = document.getElementsByClassName('main-container')[0]
+    if(theme === "dark"){
+        mainContainer.className = "main-container light";
+    }
+    else{
+        mainContainer.className = "main-container dark";
+    }
 }

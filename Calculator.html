@@ -12,40 +12,40 @@
 <body>
     
     <div class = "main-container dark">
-       <div class= "display-container">
+       <div class= "display-container dark">
             <div class="theme-button-container">
-                <div class = "theme-button">
-                    <i class="fa fa-sun-o color non-selected" aria-hidden="true"></i>
-                    <i class="fa fa-moon-o color" aria-hidden="true"></i>
+                <div class = "theme-button dark">
+                    <i id ="sun" class="fa fa-sun-o night non-selected" onclick="themeChangeHandler('light')" aria-hidden="true"></i>
+                    <i id = "moon" class="fa fa-moon-o night" onclick="themeChangeHandler('dark')" aria-hidden="true"></i>
                 </div>
             </div>
-            <div class = "display-output-container">
+            <div class = "display-output-container dark">
                 <label id="secondary-display" class ="secondary-display"></label>
                 <label  id = "main-display" class = "main-display"></label>
                 
             </div>
         </div>
-       <div class="keypad-container">
-            <div class="key operation" onclick="actionKeyHandler('ALLCLEAR')">AC</div>
-            <div class="key operation" onclick="actionKeyHandler('CHANGESIGN')">+/-</div>
-            <div class="key operation" onclick="operatorKeyHandler('MODULO')">%</div>
-            <div class="key operator" onclick="operatorKeyHandler('DIVIDE')">/</div>
-            <div class="key" onclick="numKeyHandler(7)">7</div>
-            <div class="key" onclick="numKeyHandler(8)">8</div>
-            <div class="key" onclick="numKeyHandler(9)">9</div>
-            <div class="key operator" onclick="operatorKeyHandler('MULTIPLY')">*</div>
-            <div class="key" onclick="numKeyHandler(4)">4</div>
-            <div class="key" onclick="numKeyHandler(5)">5</div>
-            <div class="key" onclick="numKeyHandler(6)">6</div>
-            <div class="key operator" onclick="operatorKeyHandler('ADD')">+</div>
-            <div class="key" onclick="numKeyHandler(3)">3</div>
-            <div class="key" onclick="numKeyHandler(2)">2</div>
-            <div class="key" onclick="numKeyHandler(1)">1</div>
-            <div class="key operator" onclick="operatorKeyHandler('SUBTRACT')">-</div>
-            <div class="key" onclick="operatorKeyHandler('UNDO')"><i class="fa fa-undo" aria-hidden="true"></i></div>
-            <div class="key" onclick="numKeyHandler(0)">0</div>
-            <div class="key" onclick="numKeyHandler('.')">.</div>
-            <div class="key operator" onclick="resultKeyHandler()">=</div>
+       <div class="keypad-container dark">
+            <div class="key dark action" onclick="actionKeyHandler('ALLCLEAR')">AC</div>
+            <div class="key dark action" onclick="actionKeyHandler('CHANGESIGN')">+/-</div>
+            <div class="key dark action" onclick="operatorKeyHandler('MODULO')">%</div>
+            <div class="key dark operator" onclick="operatorKeyHandler('DIVIDE')">/</div>
+            <div class="key dark" onclick="numKeyHandler(7)">7</div>
+            <div class="key dark" onclick="numKeyHandler(8)">8</div>
+            <div class="key dark" onclick="numKeyHandler(9)">9</div>
+            <div class="key dark operator" onclick="operatorKeyHandler('MULTIPLY')">*</div>
+            <div class="key dark" onclick="numKeyHandler(4)">4</div>
+            <div class="key dark" onclick="numKeyHandler(5)">5</div>
+            <div class="key dark" onclick="numKeyHandler(6)">6</div>
+            <div class="key dark operator" onclick="operatorKeyHandler('ADD')">+</div>
+            <div class="key dark" onclick="numKeyHandler(3)">3</div>
+            <div class="key dark" onclick="numKeyHandler(2)">2</div>
+            <div class="key dark" onclick="numKeyHandler(1)">1</div>
+            <div class="key dark operator" onclick="operatorKeyHandler('SUBTRACT')">-</div>
+            <div class="key dark" onclick="operatorKeyHandler('UNDO')"><i class="fa fa-undo" aria-hidden="true"></i></div>
+            <div class="key dark" onclick="numKeyHandler(0)">0</div>
+            <div class="key dark" onclick="numKeyHandler('.')">.</div>
+            <div class="key dark operator" onclick="resultKeyHandler()">=</div>
         </div>
     </div>
     <script src="./Calculator.js" type="text/javascript"></script>
