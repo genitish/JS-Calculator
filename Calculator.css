@@ -7,10 +7,10 @@ body{
 
 .main-container{  
     background: black;
-    height: 60%;
+    height: 80%;
     width: 20%;
     min-height: 467px;
-    min-width: 306px;
+    min-width: 280px;
     border-radius: 24px;
     overflow: hidden;
 }
@@ -19,18 +19,11 @@ body{
     height: 40%;
 }
 
-.keypad-container{
-    background-color: grey;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    height: 60%;
-}
-
 .theme-button-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 12px;
+    
 }
 
 .color{
@@ -41,9 +34,9 @@ body{
 
 .theme-button{
     padding: 2px;
-    background-color: grey;
+    background-color: #292D36;
     border-radius: 10px;
-    
+    margin-top: 12px;   
 }
 
 .non-selected{
@@ -56,18 +49,51 @@ body{
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    height: 80%;
-    padding: 0 6px 6px 6px;
+    height: 70%;
+    padding-right: 14px;
 }
 
 .secondary-display{
-    font-size: 16px;
+    font-size: 30px;
+    
 }
 
 .primary-display{
-    font-size:32px;    
+    font-size:48px;    
+}
+
+
+
+.keypad-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #292D36;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    height: 60%;
+}
+
+.key{
+    width: 60%;
+    height: 65%;
+    min-width: 40px;
+    min-height: 30px;
+    margin: 10px 14px;
+    background-color: black;
+    color:antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 8px;
 }
 
 .operator{
-    color: pink;
+    color:#754247;
+}
+
+.operation{
+    color:#26FFD8;
 }
