@@ -8,10 +8,19 @@ class Calculator {
     }
 
     add(){
-        this.result = this.numOne + this.numTwo;
+        this.result = Number(this.numOne) + Number(this.numTwo);
     }
     subtract(){
-        this.result = this.numOne - this.numTwo
+        this.result = Number(this.numOne) - Number(this.numTwo);
+    }
+    multiply(){
+        this.result = Number(this.numOne) * Number(this.numTwo);
+    }
+    divide(){
+        this.result = Number(this.numOne) / Number(this.numTwo);
+    }
+    modulo(){
+        this.result = Number(this.numOne) % Number(this.numTwo);
     }
     setNumOne(value){
         this.numOne += value;
@@ -76,13 +85,15 @@ const resultKeyHandler = () =>{
             calculator.multiply()
             break;
         case "DIVIDE":
-            calculator.add()
+            calculator.divide()
             break;
         case "MODULO":
-            calculator.add()
+            calculator.modulo()
             break;
             
         default:
             break;
     }
+    const main = document.getElementById("main-display")
+    main.innerText = calculator.result;
 }
