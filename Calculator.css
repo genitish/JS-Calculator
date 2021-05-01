@@ -55,14 +55,10 @@ body{
 
 .secondary-display{
     font-size: 30px;
-    
 }
-
-.primary-display{
+.main-display{
     font-size:48px;    
 }
-
-
 
 .keypad-container{
     display: grid;
