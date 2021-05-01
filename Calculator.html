@@ -26,27 +26,28 @@
             </div>
         </div>
        <div class="keypad-container">
-            <div class="key operation">AC</div>
-            <div class="key operation">+/-</div>
-            <div class="key operation">%</div>
-            <div class="key operator">/</div>
-            <div class="key">7</div>
-            <div class="key">8</div>
-            <div class="key">9</div>
-            <div class="key operator">*</div>
-            <div class="key">4</div>
-            <div class="key">5</div>
-            <div class="key">6</div>
-            <div class="key operator">+</div>
-            <div class="key">3</div>
-            <div class="key">2</div>
-            <div class="key">1</div>
-            <div class="key operator">-</div>
-            <div class="key"></div>
-            <div class="key">0</div>
-            <div class="key">.</div>
-            <div class="key operator">=</div>
+            <div class="key operation" onclick="keyClickHandler('%')">AC</div>
+            <div class="key operation" onclick="keyClickHandler('%')">+/-</div>
+            <div class="key operation" onclick="keyClickHandler('%')">%</div>
+            <div class="key operator" onclick="keyClickHandler('/')">/</div>
+            <div class="key" onclick="keyClickHandler(7)">7</div>
+            <div class="key" onclick="keyClickHandler(8)">8</div>
+            <div class="key" onclick="keyClickHandler(9)">9</div>
+            <div class="key operator" onclick="keyClickHandler('*')">*</div>
+            <div class="key" onclick="keyClickHandler(4)">4</div>
+            <div class="key" onclick="keyClickHandler(5)">5</div>
+            <div class="key" onclick="keyClickHandler(6)">6</div>
+            <div class="key operator" onclick="keyClickHandler('+')">+</div>
+            <div class="key" onclick="keyClickHandler(3)">3</div>
+            <div class="key" onclick="keyClickHandler(2)">2</div>
+            <div class="key" onclick="keyClickHandler(1)">1</div>
+            <div class="key operator" onclick="keyClickHandler('-')">-</div>
+            <div class="key" onclick="keyClickHandler('undo')"><i class="fa fa-undo" aria-hidden="true"></i></div>
+            <div class="key" onclick="keyClickHandler(0)">0</div>
+            <div class="key" onclick="keyClickHandler('.')">.</div>
+            <div class="key operator" onclick="keyClickHandler('=')">=</div>
         </div>
     </div>
+    <script src="./Calculator.js" type="text/javascript"></script>
 </body>
 </html>
