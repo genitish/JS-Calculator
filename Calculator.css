@@ -1,4 +1,5 @@
 body{
+    background: grey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,13 +7,21 @@ body{
 }
 
 .main-container{  
-    background: black;
+    
     height: 80%;
     width: 20%;
     min-height: 467px;
     min-width: 280px;
     border-radius: 24px;
     overflow: hidden;
+}
+
+.main-container.dark{
+    background: #22252D;
+}
+
+.main-container.light{
+    background: #FFFFFF;
 }
 
 .display-container{
@@ -63,10 +72,17 @@ body{
 .keypad-container{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: #292D36;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
     height: 60%;
+}
+
+.keypad-container.dark{
+    background-color: #292D36;
+}
+
+.keypad-container.light{
+    background-color: #F9F9F9;
 }
 
 .key{

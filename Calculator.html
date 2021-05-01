@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <div class = "main-container">
+    <div class = "main-container dark">
        <div class= "display-container">
             <div class="theme-button-container">
                 <div class = "theme-button">
@@ -26,8 +26,8 @@
             </div>
         </div>
        <div class="keypad-container">
-            <div class="key operation" onclick="operatorKeyHandler('%')">AC</div>
-            <div class="key operation" onclick="operatorKeyHandler('%')">+/-</div>
+            <div class="key operation" onclick="actionKeyHandler('ALLCLEAR')">AC</div>
+            <div class="key operation" onclick="actionKeyHandler('CHANGESIGN')">+/-</div>
             <div class="key operation" onclick="operatorKeyHandler('MODULO')">%</div>
             <div class="key operator" onclick="operatorKeyHandler('DIVIDE')">/</div>
             <div class="key" onclick="numKeyHandler(7)">7</div>

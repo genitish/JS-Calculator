@@ -31,6 +31,16 @@ class Calculator {
     setOperator(operator){
         this.operator = operator;
     }
+    clearCalculator(){
+        this.numOne = "";
+        this.numTwo = "";
+        this.result = "";
+        this.prevResult = "";
+        this.operator = "";
+    }
+    changeSign(){
+        this.numTwo ? this.numTwo = String(Number(this.numTwo) * -1) : this.numOne = String(Number(this.numOne) * -1);
+    }
 }
 
 const calculator = new Calculator();
@@ -96,4 +106,19 @@ const resultKeyHandler = () =>{
     }
     const main = document.getElementById("main-display")
     main.innerText = calculator.result;
+}
+
+const actionKeyHandler = (action) => {
+    switch (action) {
+        case 'ALLCLEAR':
+            calculator.clearCalculator();
+            break;
+        case 'CHANGESIGN':
+            calculator.changeSign();
+            break;
+        default:
+            break;
+    }
+    updateMainDisplay();
+    updateSecondaryDisplay();
 }
