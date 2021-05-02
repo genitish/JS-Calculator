@@ -15,8 +15,8 @@
        <div class= "display-container dark">
             <div class="theme-button-container">
                 <div class = "theme-button dark">
-                    <i id ="sun" class="fa fa-sun-o night non-selected" onclick="themeChangeHandler('light')" aria-hidden="true"></i>
-                    <i id = "moon" class="fa fa-moon-o night" onclick="themeChangeHandler('dark')" aria-hidden="true"></i>
+                    <i id ="sun" class="fa fa-sun-o night non-selected" onclick="themeChangeHandler('dark')" aria-hidden="true"></i>
+                    <i id = "moon" class="fa fa-moon-o night" onclick="themeChangeHandler('light')" aria-hidden="true"></i>
                 </div>
             </div>
             <div class = "display-output-container dark">
@@ -42,7 +42,7 @@
             <div class="key dark" onclick="numKeyHandler(2)">2</div>
             <div class="key dark" onclick="numKeyHandler(1)">1</div>
             <div class="key dark operator" onclick="operatorKeyHandler('SUBTRACT')">-</div>
-            <div class="key dark" onclick="operatorKeyHandler('UNDO')"><i class="fa fa-undo" aria-hidden="true"></i></div>
+            <div class="key dark" onclick="actionKeyHandler('UNDO')"><i class="fa fa-undo" aria-hidden="true"></i></div>
             <div class="key dark" onclick="numKeyHandler(0)">0</div>
             <div class="key dark" onclick="numKeyHandler('.')">.</div>
             <div class="key dark operator" onclick="resultKeyHandler()">=</div>

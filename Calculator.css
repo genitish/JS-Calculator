@@ -49,7 +49,7 @@ body{
 
 .theme-button{
     padding: 2px;
-   
+    cursor:pointer;
     border-radius: 10px;
     margin-top: 12px;   
 }
@@ -60,7 +60,6 @@ body{
 .theme-button.light{
     background-color: #F9F9F9;
 }
-
 
 
 .non-selected{
@@ -79,7 +78,9 @@ body{
 .display-output-container.dark{
     color:antiquewhite;
 }
-
+.display-output-container.light{
+    color:black;
+}
 .secondary-display{
     font-size: 30px;
 }
@@ -109,7 +110,6 @@ body{
     min-width: 40px;
     min-height: 30px;
     margin: 10px 14px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,11 +122,23 @@ body{
     background-color: #22252D;
     color:antiquewhite;
 }
+.key.light{
+    background-color: #F7F7F7;
+    color:#292D36;
+}
 
 .dark.operator{
     color:#754247;
+    font-weight: 800;
+}
+.light.operator{
+    color:#754247;
+    font-weight: 800;
 }
 
 .dark.action{
+    color:#26FFD8;
+}
+.light.action{
     color:#26FFD8;
 }
